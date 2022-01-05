@@ -10257,7 +10257,7 @@ html {
 }
 body {
   min-height: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 body > .section {
@@ -12268,6 +12268,9 @@ input,
 select,
 textarea {
   font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+body {
+  background: url("/img/background.png");
 }
 .img-x {
   position: relative;
