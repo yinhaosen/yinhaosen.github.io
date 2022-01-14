@@ -1538,7 +1538,6 @@ mjx-container svg:focus {
 .about-card-dsc {
   margin-top: 6px;
   color: var(--text-light-color);
-  white-space: pre-line;
 }
 .about-card-society {
   margin-top: 8px;
