@@ -152,6 +152,9 @@
   
   
   
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
   
   
   <link rel="stylesheet" href="/css/main.css">
@@ -390,6 +393,44 @@ return [0, 1].
   
   
 </div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  <div id="vcomments"></div>
+  
+  <script>
+    loadScript("//unpkg.com/valine/dist/Valine.min.js");
+    var oldLoadVa = window.onload;
+    window.onload = function () {
+      oldLoadVa && oldLoadVa();
+      new Valine({
+        el: '#vcomments',
+        appId: 'w6RkX3GyoNkuLyl3PRYFQtkr-MdYXbMMI',
+        appKey: 'wCh2CHJYbb71f4MF3XdOdk7L',
+        placeholder: '告诉我你有什么想法(^-^)',
+        path: window.location.pathname,
+        avatar: 'robohash',
+        meta: ["nick","mail","link"],
+        pageSize: '10',
+        lang: '',
+        visitor: 'true',
+        highlight: true,
+        recordIP: true,
+        
+        
+        emojiCDN: 'https://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/',
+        
+        
+        enableQQ: 'true',
+        requiredFields: [],
+      });
+    };
+  </script>
+
+  </div>
 
 <div 
   class="card card-content toc-card" 
